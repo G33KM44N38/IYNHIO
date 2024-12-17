@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Résonance</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-color: #000000;
+        --text-color: #000000;
+        --accent-color: #000000;
+        --max-width: 500px;
+      }
+
+      body {
+        font-family: Impact, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--max-width);
+        background-color: black;
+        padding: 50px 40px;
+        position: relative;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      h1 {
+        font-family: Impact, sans-serif;
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .input-email {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid white;
+        font-family: Impact, sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background-color: black;
+        color: white;
+      }
+
+      .input-email:focus {
+        outline: none;
+      }
+
+      .validate-btn {
+        width: 100%;
+        padding: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-family: Impact, sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .validate-btn:hover {
+        background-color: white;
+        color: black;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>IF YOU NOT HAPPY, IT'S OK</h1>
+      </div>
+
+      <form
+        onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');"
+      >
+        <div class="form-group">
+          <input
+            type="email"
+            class="input-email"
+            placeholder="Votre email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          />
+          <button type="submit" class="validate-btn" style="margin-top: 15px">
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
