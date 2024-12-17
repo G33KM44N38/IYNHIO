@@ -111,21 +111,12 @@
         <h1>IF YOU NOT HAPPY, IT'S OK</h1>
       </div>
 
-      <form
-        onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');"
-      >
+      <form action="https://formspree.io/f/xzzblvrv" method="POST">
         <div class="form-group">
-          <input
-            type="email"
-            class="input-email"
-            placeholder="Votre email"
-            required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          />
-          <button type="submit" class="validate-btn" style="margin-top: 15px">
-            Send
-          </button>
+          <label for="email">Your email:</label>
+          <input type="email" id="email" name="email" class="input-email" />
         </div>
+        <button type="submit" class="validate-btn">Send</button>
       </form>
     </div>
   </body>
